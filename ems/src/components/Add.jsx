@@ -7,7 +7,7 @@ export default function Add() {
       <Link to={"/employee/add"} >
       <button
         type="submit"
-        className="bg-black rounded px-6 py-3 mt-3 text-center text-white"
+        className="bg-black rounded px-6  py-3 mt-3 text-center text-white"
       >
         Add New
       </button>

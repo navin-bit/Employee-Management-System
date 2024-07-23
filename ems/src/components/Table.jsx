@@ -91,9 +91,9 @@ export default function Table() {
 
               <tbody className="divide-y divide-gray-200">
                 {records.map((e) => (
-                  <tr key={e._id}>
+                  <tr key={e.id}>
                     <td className="whitespace-nowrap text-center px-4 py-2 font-medium text-gray-900">
-                      {e._id}
+                      {e.id}
                     </td>
                     <td className="whitespace-nowrap text-center px-4 py-2 font-medium text-gray-900">
                       {e.first_name}
@@ -111,13 +111,13 @@ export default function Table() {
                       {e.department}
                     </td>
                     <td className="whitespace-nowrap text-center px-4 py-2 text-gray-700">
-                      <Link to={"/employee/edit/" + e._id}>
+                      <Link to={"/employee/edit/" + e.id}>
                         <button className="bg-blue-500 m-3 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                           Update
                         </button>
                       </Link>
                       <button
-                        onClick={() => handleDelete(e._id)}
+                        onClick={() => handleDelete(e.id)}
                         className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
                       >
                         Delete
