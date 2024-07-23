@@ -1,4 +1,4 @@
-package com.app.EMS.service;
+package com.app.ems_server.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,13 +6,12 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.app.EMS.model.Employee;
-import com.app.EMS.repository.EmpRepository;
+import com.app.ems_server.model.Employee;
+import com.app.ems_server.repository.EmpRepository;
 
 @Service
 public class EmpService {
-
-    @Autowired
+  @Autowired
     private EmpRepository empRepository;
 
     public String addEmployee(Employee employee) {
@@ -55,4 +54,5 @@ public class EmpService {
         return empRepository.findByFirst_name(first_name);
     }
 
+    
 }
